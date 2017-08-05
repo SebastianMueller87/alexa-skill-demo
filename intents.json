@@ -2,6 +2,9 @@
   "intents": [
     {
       "intent": "SayHello"
+    },
+    {
+      "intent": "SayGoodbye"
     }
   ]
 }
