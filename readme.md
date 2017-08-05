@@ -95,19 +95,20 @@
     * Use the lambda_basic_execution role (may be you need to create that first)
   * Hit “next“ and then “Create function“
 
-### 4. Link your skill to the lambda function
+## Link your skill to the lambda function
+### 1.
   * Copy the ARN (top right of your function overview screen)
     * Everything right from `ARN - `
   * Go back to your skill (developer account) and click on “Configuration“
   * Choose `AWS Lambda ARN (Amazon Resource Name)`
   * Choose an region, paste the ARN-Code into the text field and click next
 
-### 5. Test
+### 2. Test
   * Choose the `Service Simulator` and type in any utterance you defined and press `Ask first-demo-skill`
     * Example: `to say hello`
   * Listen to the service response
 
-### 6. Test with echo/echo dot
+### 3. Test with echo/echo dot
   * Log into your alexa control panel
   * Click on “Skills“ and then on “your skill“ (top right)
   * You should see your skill in the list of skills
@@ -118,6 +119,13 @@
 Every changes (code, intents, utterances...) are instantly available, so you can use your alexa for check out the functionality of your skill.
 You can also test your lambda function by creating a test event (AWS Lambda function -> action) or using the Service Simulator of your skill.
 
+## Switch on different intents
+  * You can switch on different intents by switching on the intent name (event.request.intent.name)
 
+### 1. Add second intent
+  * Developer console: Go to your skill and open the `Interaction Model`
+  * Add a new intent (f.e. [SayGoodbye](https://github.com/SebastianMueller87/alexa-skill-demo/blob/4996bc295fa9dfa26fd04afbd55268dcf9ddaed3/intents.json))
+  * Add new utterances ([example](https://github.com/SebastianMueller87/alexa-skill-demo/blob/afff0accfe284074d801b65c2b552b0ae41bd2ce/utterances.txt))
+  * Add switch on intents ([example](https://github.com/SebastianMueller87/alexa-skill-demo/blob/1639396d2c832792047481800b3572fbe14d5a8d/my-first-alexa-skill.js))
 
 
