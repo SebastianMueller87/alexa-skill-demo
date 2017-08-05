@@ -24,7 +24,7 @@
 * Do not use any of the directives for this example
 ### 2. Configure the Interaction Model
 * Click on the `Interaction Model` tab
-* Define the Intent Schema [(example)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/017ad91ff1eac0089dfb912ad748912e506beb09)
+* Define the Intent Schema [(example)](https://github.com/SebastianMueller87/alexa-skill-demo/blob/017ad91ff1eac0089dfb912ad748912e506beb09/intents.json)
   * Intents, which are invoked by utterances and send to your Code to interact with
   * The intent schema is an array, which contains an array of intents.
 
@@ -39,7 +39,7 @@
     }
 
 * Do not define any [Custom Slot Types](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference#custom-slot-syntax) for this example
-* Define Sample Utterances [(utterances.txt)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/f6fc34f73c4841b726f782ba7fe37b1546f17fba)
+* Define Sample Utterances [(utterances.txt)](https://github.com/SebastianMueller87/alexa-skill-demo/blob/f6fc34f73c4841b726f782ba7fe37b1546f17fba/utterances.txt)
   * Schema: `INTENT UTTERANCE`
   * Examples:
       * `SayHello to say hello`
@@ -72,7 +72,7 @@
         * Launch Request - your skill launches (event.request.type)
         * Intent Request - your skil receives an intent (event.request.type)
         * Session Ended Request - your skill receives an end session request (event.request.type)
-      * You can switch on the different event types. Look at [this](https://github.com/SebastianMueller87/alexa-skill-demo/commit/0385fea8a0b5a6ccea4c3f7cb2f889da8cb8e81f)
+      * You can switch on the different event types. Look at [this](https://github.com/SebastianMueller87/alexa-skill-demo/blob/0385fea8a0b5a6ccea4c3f7cb2f889da8cb8e81f/my-first-alexa-skill.js)
       * Create an answer and call that after receiving *any* IntentRequest
         ```
         context.succeed({
@@ -87,9 +87,9 @@
           }
         })
 
-  Now your function code should look like [this](https://github.com/SebastianMueller87/alexa-skill-demo/commit/d06e67f98ec90a1b60920525c3ff00734345eed2)
+  Now your function code should look like [this](https://github.com/SebastianMueller87/alexa-skill-demo/blob/d06e67f98ec90a1b60920525c3ff00734345eed2/my-first-alexa-skill.js)
 
-  Add a try-catch around everything to avoid service crashes. [(Code)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/87e88d43c6cbed99bebd669c7a27c0ad78e0c56b)
+  Add a try-catch around everything to avoid service crashes. [(Code)](https://github.com/SebastianMueller87/alexa-skill-demo/blob/87e88d43c6cbed99bebd669c7a27c0ad78e0c56b/my-first-alexa-skill.js)
 
   * Choose an Lambda function handler and role
     * Use the lambda_basic_execution role (may be you need to create that first)
