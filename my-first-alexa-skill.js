@@ -10,7 +10,17 @@ exports.handler = (event, context, callback) => {
             break;
 
         case 'IntentRequest':
-            console.log('IntentRequest')
+            context.succeed({
+              version: "1.0",
+              sessionAttributes: {},
+              response: {
+                outputSpeech: {
+                  type: 'PlainText',
+                  text: 'Hello from my first alexa skill'
+                },
+                shouldEndSession: true
+              }
+            })
             break;
 
         case 'SessionEndedRequest':
