@@ -47,7 +47,7 @@ exports.handler = (event, context, callback) => {
                 break;
 
             case 'SessionEndedRequest':
-                console.log('LaunchRequest')
+                console.log('SessionEndedRequest')
                 break;
 
             default:
