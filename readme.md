@@ -24,7 +24,7 @@
 * Do not use any of the directives for this example
 ### 2. Configure the Interaction Model
 * Click on the `Interaction Model` tab
-* Define the Intent Schema ([example])(https://github.com/SebastianMueller87/alexa-skill-demo/commit/017ad91ff1eac0089dfb912ad748912e506beb09)
+* Define the Intent Schema [(example)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/017ad91ff1eac0089dfb912ad748912e506beb09)
   * Intents, which are invoked by utterances and send to your Code to interact with
   * The intent schema is an array, which contains an array of intents.
 
@@ -39,7 +39,7 @@
     }
 
 * Do not define any [Custom Slot Types](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interaction-model-reference#custom-slot-syntax) for this example
-* Define Sample Utterances ([utterances.txt])(https://github.com/SebastianMueller87/alexa-skill-demo/commit/f6fc34f73c4841b726f782ba7fe37b1546f17fba)
+* Define Sample Utterances [(utterances.txt)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/f6fc34f73c4841b726f782ba7fe37b1546f17fba)
   * Schema: `INTENT UTTERANCE`
   * Examples:
       * `SayHello to say hello`
@@ -89,7 +89,7 @@
 
   Now your function code should look like [this](https://github.com/SebastianMueller87/alexa-skill-demo/commit/d06e67f98ec90a1b60920525c3ff00734345eed2)
 
-  Add a try-catch around everything to avoid service crashes. ([Code])(https://github.com/SebastianMueller87/alexa-skill-demo/commit/87e88d43c6cbed99bebd669c7a27c0ad78e0c56b)
+  Add a try-catch around everything to avoid service crashes. [(Code)](https://github.com/SebastianMueller87/alexa-skill-demo/commit/87e88d43c6cbed99bebd669c7a27c0ad78e0c56b)
 
   * Choose an Lambda function handler and role
     * Use the lambda_basic_execution role (may be you need to create that first)
