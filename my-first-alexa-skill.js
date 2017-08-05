@@ -11,17 +11,39 @@ exports.handler = (event, context, callback) => {
                 break;
 
             case 'IntentRequest':
-                context.succeed({
-                  version: "1.0",
-                  sessionAttributes: {},
-                  response: {
-                    outputSpeech: {
-                      type: 'PlainText',
-                      text: 'Hello from my first alexa skill'
-                    },
-                    shouldEndSession: true
-                  }
-                })
+                console.log('IntentRequest')
+
+                switch(event.request.intent.name) {
+                    case 'SayHello':
+                        context.succeed({
+                          version: "1.0",
+                          sessionAttributes: {},
+                          response: {
+                            outputSpeech: {
+                              type: 'PlainText',
+                              text: 'Hello from my first alexa skill'
+                            },
+                            shouldEndSession: true
+                          }
+                        })
+                        break;
+
+                    case 'SayGoodbye':
+                        context.succeed({
+                          version: "1.0",
+                          sessionAttributes: {},
+                          response: {
+                            outputSpeech: {
+                              type: 'PlainText',
+                              text: 'Goodbye'
+                            },
+                            shouldEndSession: true
+                          }
+                        })
+                        break;
+                    default:
+                        context.fail(`INVALID IntentName ${event.request.intent.name}`)
+                }
                 break;
 
             case 'SessionEndedRequest':
